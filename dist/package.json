@@ -1,0 +1,10 @@
+{
+    "name": "task-manager-harmoner",
+    "version": "1.0.0",
+    "description": "task manager",
+    "author": "Homohabilis",
+    "private": true,
+    "scripts": {
+        "postinstall": "npm install express"
+    }
+}
