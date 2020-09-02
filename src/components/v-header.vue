@@ -1,12 +1,8 @@
 <template>
     <header>
-        <div class="container header-container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="header">
-                        <div class="logo">LOGOOO</div>
-                    </div>
-                </div>
+        <div class="container-fluid header-container">
+            <div class="header">
+                <div class="logo">LOGOOO</div>
             </div>
         </div>
     </header>
@@ -33,6 +29,7 @@ export default {
     {
         height: 60px;
         background: #52586F;
+        padding: 0 150px;
     }
 
     .header-container
@@ -43,6 +40,11 @@ export default {
         align-items: center;
     }
     
+    .header
+    {
+        width: 100%;
+    }
+
     .logo
     {
         font-family: Noto Sans;

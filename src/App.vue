@@ -47,7 +47,7 @@ export default {
   {
     font-family: Yanone Kaffeesatz;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 21px;
     text-decoration-line: underline;
     color: #616161;
@@ -55,8 +55,7 @@ export default {
 
   a:hover
   {
-    font-weight: 400;
-    color: #616161;
+    color: rgb(34, 34, 34);
   }
 
   p
@@ -74,7 +73,7 @@ export default {
     line-height: 45px;
   }
 
-  h1
+  h2
   {
     font-size: 38px;
   }
@@ -82,5 +81,31 @@ export default {
   h3
   {
     font-size: 20px;
+  }
+
+  h6
+  {
+    font-size: 14px;
+  }
+
+  .small-text
+  {
+    font-size: 16px;
+  }
+
+  button
+  {
+    font-family: Yanone Kaffeesatz;
+  }
+
+  button:focus, input:focus
+  {
+    outline: none;
+  }
+
+  .icon
+  {
+    width: 15px;
+    height: 100%;
   }
 </style>
