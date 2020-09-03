@@ -1,0 +1,39 @@
+<template>
+    <div class="login">
+        <form class="window-form">
+            <h2 class="window__title">Добро пожаловать!</h2>
+            <div class="window-form-field">
+                <input type="text" class="window-form-field__input" id="login-email" placeholder="Е-mail">
+                <label for="login-email"><img src="../assets/email_icon.svg" alt="*" class="icon"></label>
+            </div>
+            <div class="window-form-field">
+                <input type="password" class="window-form-field__input" id="login-password" placeholder="Пароль">
+                <label for="login-password"><img src="../assets/password_icon.svg" alt="*" class="icon"></label>
+            </div>
+            <a href="#" class="window-small-link">Не помню пароль</a>
+            <button class="window-form__button">ВХОД</button>
+            <router-link to="/register">Регистрация</router-link>
+        </form>
+    </div>
+</template>
+
+<script>
+
+export default {
+    name: 'v-login',
+    components: {
+
+    },
+    data: () => {
+    return {
+    }
+    },
+    methods: {
+
+    }
+}
+</script>
+  
+<style>
+    
+</style>

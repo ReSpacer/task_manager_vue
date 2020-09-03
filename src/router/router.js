@@ -5,10 +5,15 @@ Vue.use(VueRouter);
 
 export default new VueRouter({
   routes: [
-    // {
-    //     name: '',
-    //     path: '',
-    //     component: ''
-    // }
+    {
+      path: '/',
+      name: 'v-login',
+      component: () => import('../components/v-login')
+    },
+    {
+      path: '/register',
+      name: 'v-register',
+      component: () => import('../components/v-register')
+    }
   ]
 });

@@ -24,8 +24,8 @@ export default {
   
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;400;700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Sumana:wght@400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
   *
   {
@@ -36,6 +36,7 @@ export default {
   body
   {
     background-color: #E5E5E5;
+    font-family: Montserrat;
   }
 
   #app {
@@ -45,9 +46,9 @@ export default {
 
   a
   {
-    font-family: Yanone Kaffeesatz;
+    font-family: Montserrat;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 10px;
     line-height: 21px;
     text-decoration-line: underline;
     color: #616161;
@@ -68,34 +69,24 @@ export default {
 
   h1, h2, h3, h4, h5, h6
   {
-    font-family: Yanone Kaffeesatz;
+    font-family: Ubuntu;
     font-weight: 400;
-    line-height: 45px;
+    line-height: 25px;
   }
 
   h2
   {
-    font-size: 38px;
-  }
-
-  h3
-  {
     font-size: 20px;
-  }
-
-  h6
-  {
-    font-size: 14px;
   }
 
   .small-text
   {
-    font-size: 16px;
+    font-size: 7px;
   }
 
   button
   {
-    font-family: Yanone Kaffeesatz;
+    font-family: Sumana;
   }
 
   button:focus, input:focus
@@ -103,9 +94,16 @@ export default {
     outline: none;
   }
 
+  router-link
+  {
+    font-family: Sumana;
+    font-size: 10px;
+    font-weight: 400;
+  }
+
   .icon
   {
-    width: 15px;
+    width: 7px;
     height: 100%;
   }
 </style>

@@ -2,12 +2,7 @@
     <footer>
         <div class="container-fluid footer-container">
             <div class="footer">
-                <div class="socials">
-                    <a href="#"><img src="../assets/instagram_logo.png" alt="instagram" class="socials__item"></a>
-                    <a href="#"><img src="../assets/vk_logo.png" alt="vk" class="socials__item"></a>
-                    <a href="#"><img src="../assets/facebook_logo.png" alt="facebook" class="socials__item"></a>
-                    <a href="#"><img src="../assets/google_logo.png" alt="google" class="socials__item"></a>
-                </div>
+                <div></div>
                 <a href="#" class="politics">Условия и конфиденциальность</a>
                 <div class="apps">
                     <a href="#"><img src="../assets/google-play_logo.png" alt="google-play" class="apps__item"></a>
@@ -37,8 +32,10 @@ export default {
 <style>
     footer
     {
+        position: absolute;
+        bottom: 0;
         width: 100%;
-        height: 93px;
+        height: 50px;
         background: #52586F;
         padding: 0 150px;
     }
@@ -52,15 +49,14 @@ export default {
 
     .footer
     {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         width: 100%;
     }
 
-    .socials__item
+    .apps
     {
-        margin-right: 40px;
+        margin-left: auto;
     }
 
     .apps__item
@@ -70,8 +66,9 @@ export default {
 
     .politics
     {
+        margin: 0 auto;
         font-weight: 300;
-        font-size: 20px;
+        font-size: 10px;
         line-height: 24px;
         color: white;
         text-decoration: none;
