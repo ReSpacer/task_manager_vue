@@ -10,9 +10,9 @@
                 <input type="password" class="window-form-field__input" id="login-password" placeholder="Пароль">
                 <label for="login-password"><img src="../assets/password_icon.svg" alt="*" class="icon"></label>
             </div>
-            <a href="#" class="window-small-link">Не помню пароль</a>
+            <router-link to="/reset-password" href="#" class="window-small-subtext">Не помню пароль</router-link>
             <button class="window-form__button">ВХОД</button>
-            <router-link to="/register">Регистрация</router-link>
+            <router-link to="/register" class="window-link-button">Регистрация</router-link>
         </form>
     </div>
 </template>

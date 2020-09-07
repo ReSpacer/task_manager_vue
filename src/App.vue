@@ -24,7 +24,6 @@ export default {
   
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Sumana:wght@400;700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
   *
@@ -37,6 +36,7 @@ export default {
   {
     background-color: #E5E5E5;
     font-family: Montserrat;
+    color:black;
   }
 
   #app {
@@ -48,8 +48,8 @@ export default {
   {
     font-family: Montserrat;
     font-weight: 300;
-    font-size: 10px;
-    line-height: 21px;
+    font-size: 9px;
+    line-height: 11px;
     text-decoration-line: underline;
     color: #616161;
   }
@@ -63,8 +63,8 @@ export default {
   {
     font-family: Montserrat;
     font-weight: 300;
-    line-height: 17px;
-    font-size: 14px;
+    font-size: 9px;
+    line-height: 11px;
   }
 
   h1, h2, h3, h4, h5, h6
@@ -86,19 +86,13 @@ export default {
 
   button
   {
-    font-family: Sumana;
+    font-family: Ubuntu;
+    font-size: 10px;
   }
 
   button:focus, input:focus
   {
     outline: none;
-  }
-
-  router-link
-  {
-    font-family: Sumana;
-    font-size: 10px;
-    font-weight: 400;
   }
 
   .icon

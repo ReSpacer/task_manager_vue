@@ -3,7 +3,7 @@
         <div class="container window-container">
             <div class="window">
                 <div class="window__image">
-                    <img :src="getRandomImage()" alt="image">
+                    <img :src="curImage" alt="image">
                 </div>
                 <div class="window__content">
                     <router-view/>
@@ -21,23 +21,32 @@ export default {
   },
   data: () => {
     return {
-        images: ["window_img_1",
+        imageNames: ["window_img_1",
         "window_img_2",
         "window_img_3",
-        "window_img_4"]
+        "window_img_4"],
+        curImageName: "",
+        curImage: {}
     }
   },
   methods: {
-    getRandomImage() {
-        let images = require.context('../assets/', false, /\.png$/),
-            img = this.images[Math.floor(Math.random()*this.images.length)];
-        return images('./' + img + ".png")
+    updateImage() {
+        let allImages = require.context('../assets/', false, /\.png$/);
+        let freeImageNames = this.imageNames.filter((imageName) => imageName != this.curImageName);
+        this.curImageName = freeImageNames[Math.floor(Math.random() * freeImageNames.length)];
+        this.curImage = allImages('./' + this.curImageName + ".png")
     }
   },
   mounted()
   {
     
-  }
+  },
+  watch:
+  {
+    $route(){
+        this.updateImage()
+    }
+  } 
 }
 </script>
   
@@ -77,6 +86,15 @@ export default {
     {
         color: #598FF9;
         margin: 0;
+        margin-bottom: 30px;
+        text-align: center;
+        min-width: 205px;
+    }
+
+    .window__text
+    {
+        margin-bottom: 20px;
+        align-self: flex-start;
     }
 
     .window-form
@@ -90,12 +108,27 @@ export default {
     .window-form-field
     {
         display: flex;
-        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
-    .window-form-field label
+    .window-form-field:last-of-type
+    {
+        margin-bottom: 0;
+    }
+
+    .window-form-field label, .window-form-field__icon
     {
         margin: 0 4px;
+    }
+
+    .window-form-field__text
+    {
+        font-family: Montserrat;
+        font-size: 9px;
+        margin: auto 0;
+        padding: 0 4px;
+        color: rgba(0, 0, 0, 0.62);
+        width: 190px;
     }
 
     .window-form-field__input
@@ -124,7 +157,6 @@ export default {
 
     .window-form__button
     {
-        font-size: 10px;
         min-width: 124px;
         height: 22px;
         color: white;
@@ -149,7 +181,12 @@ export default {
         border-color: #70B1DC;
     }
 
-    .window-small-link
+    .window-small-text
+    {
+        align-self: flex-start;
+    }
+
+    .window-small-subtext
     {
         max-width: 140px;
         align-self: flex-start;
@@ -157,17 +194,26 @@ export default {
         margin-top: 10px;
     }
 
-    .window-small-link a
+    .window-small-text a,
+    .window-small-subtext a
     {
         margin-left: 0;
     }
 
-    .window-small-link, .window-small-link a
+    .window-small-text, .window-small-text a,
+    .window-small-subtext, .window-small-subtext a
     {
         font-family: Montserrat;
         font-weight: 300;
         line-height: 9px;
         font-size: 7px;
+    }
+
+    .window-link-button
+    {
+        font-family: Ubuntu;
+        font-size: 10px;
+        font-weight: 400;
     }
     
 

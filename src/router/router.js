@@ -12,8 +12,19 @@ export default new VueRouter({
     },
     {
       path: '/register',
-      name: 'v-register',
+      name: 'register',
       component: () => import('../components/v-register')
+    },
+    {
+      path: '/reset-password',
+      name: 'reset-password',
+      component: () => import('../components/v-reset-password')
+    },
+    {
+      path: '/change-password',
+      name: 'change-password',
+      component: () => import('../components/v-change-password')
     }
+    
   ]
 });
