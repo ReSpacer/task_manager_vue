@@ -21,20 +21,16 @@ export default {
   },
   data: () => {
     return {
-        imageNames: ["window_img_1",
-        "window_img_2",
-        "window_img_3",
-        "window_img_4"],
-        curImageName: "",
-        curImage: {}
+        curImage: {},
+        curImageName: "window_img_1.png"
     }
   },
   methods: {
     updateImage() {
-        let allImages = require.context('../assets/', false, /\.png$/);
-        let freeImageNames = this.imageNames.filter((imageName) => imageName != this.curImageName);
-        this.curImageName = freeImageNames[Math.floor(Math.random() * freeImageNames.length)];
-        this.curImage = allImages('./' + this.curImageName + ".png")
+        let allImages = require.context('@/assets/images/window_img/', false, /\.png$/);
+        let freeImagesNames = allImages.keys().filter((imageName) => !imageName.includes(this.curImageName));
+        this.curImageName = freeImagesNames[Math.floor(Math.random() * freeImagesNames.length)];
+        this.curImage = allImages(this.curImageName);
     }
   },
   mounted()
@@ -76,6 +72,12 @@ export default {
         margin-right: 33px;
     }
 
+    .window__image img
+    {
+        pointer-events: none;
+        user-select: none;
+    }
+
     .window__content
     {
         width: 100%;
@@ -89,6 +91,7 @@ export default {
         margin-bottom: 30px;
         text-align: center;
         min-width: 205px;
+        user-select: none;
     }
 
     .window__text
@@ -214,6 +217,7 @@ export default {
         font-family: Ubuntu;
         font-size: 10px;
         font-weight: 400;
+        user-select: none;
     }
     
 

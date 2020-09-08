@@ -5,8 +5,8 @@
                 <div></div>
                 <a href="#" class="politics">Условия и конфиденциальность</a>
                 <div class="apps">
-                    <a href="#"><img src="../assets/google-play_logo.png" alt="google-play" class="apps__item"></a>
-                    <a href="#"><img src="../assets/A_logo.png" alt="A" class="apps__item"></a>
+                    <a href="#"><img src="@/assets/images/logos/google-play_logo.png" alt="google-play" class="apps__item"></a>
+                    <a href="#"><img src="@/assets/images/logos/A_logo.png" alt="A" class="apps__item"></a>
                 </div>
             </div>
         </div>

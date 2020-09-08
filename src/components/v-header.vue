@@ -2,7 +2,7 @@
     <header>
         <div class="container-fluid header-container">
             <div class="header">
-                <div class="logo">LOGOOO</div>
+                <div class="logo"><router-link to="/">LOGOOO</router-link></div>
             </div>
         </div>
     </header>
@@ -45,7 +45,7 @@ export default {
         width: 100%;
     }
 
-    .logo
+    .logo, .logo a
     {
         font-family: Noto Sans;
         font-weight: 400;
@@ -59,5 +59,7 @@ export default {
         align-items: center;
         background-color: white;
         border-radius: 5px;
+        text-decoration: none;
+        user-select: none;
     }
 </style>

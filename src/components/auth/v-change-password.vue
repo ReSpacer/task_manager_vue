@@ -4,11 +4,11 @@
             <h2 class="window__title">Смена пароля</h2>
             <div class="window-form-field">
                 <input type="password" class="window-form-field__input" id="change-password-password" placeholder="Пароль">
-                <label for="change-password-password"><img src="../assets/password_icon.svg" alt="*" class="icon"></label>
+                <label for="change-password-password"><img src="@/assets/icons/password_icon.svg" alt="*" class="icon"></label>
             </div>
             <div class="window-form-field">
                 <input type="password" class="window-form-field__input" id="change-password-repeat-password" placeholder="Подтвердить пароль">
-                <label for="change-password-repeat-password"><img src="../assets/password_icon.svg" alt="*" class="icon"></label>
+                <label for="change-password-repeat-password"><img src="@/assets/icons/password_icon.svg" alt="*" class="icon"></label>
             </div>
             <button class="window-form__button">ВХОД</button>
         </form>

@@ -5,7 +5,7 @@
             <h2 class="window__title">Смена пароля</h2>
             <div class="window-form-field">
                 <input type="text" class="window-form-field__input" id="reset-password-email" placeholder="Е-mail">
-                <label for="reset-password-email"><img src="../assets/email_icon.svg" alt="*" class="icon"></label>
+                <label for="reset-password-email"><img src="@/assets/icons/email_icon.svg" alt="*" class="icon"></label>
             </div>
             <button class="window-form__button" @click="resetPassword">СБРОС ПАРОЛЯ</button>
             <router-link to="/register" class="window-link-button">Регистрация</router-link>
