@@ -1,7 +1,7 @@
 <template>
     <div class="main-wrapper">
       <v-header/>
-      <v-window/>
+      <router-view></router-view>
       <v-footer/>
     </div>
 </template>
@@ -9,14 +9,12 @@
 <script>
 import vHeader from './v-header'
 import vFooter from './v-footer'
-import vWindow from './v-window'
 
 export default {
   name: 'v-main-wrapper',
   components: {
     vHeader,
-    vFooter,
-    vWindow
+    vFooter
   },
   data: () => {
     return {

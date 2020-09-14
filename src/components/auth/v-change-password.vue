@@ -1,6 +1,6 @@
 <template>
     <div class="change-password">
-        <form class="window-form">
+        <form class="window-form" @submit.prevent="">
             <h2 class="window__title">Смена пароля</h2>
             <div class="window-form-field">
                 <input type="password" class="window-form-field__input" id="change-password-password" placeholder="Пароль">

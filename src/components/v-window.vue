@@ -1,13 +1,11 @@
 <template>
-    <main>
-        <div class="container window-container">
-            <div class="window">
-                <div class="window__image">
-                    <img :src="curImage" alt="image">
-                </div>
-                <div class="window__content">
-                    <router-view/>
-                </div>
+    <main class="container window-container">
+        <div class="window">
+            <div class="window__image">
+                <img :src="curImage" alt="image">
+            </div>
+            <div class="window__content">
+                <component :is="curComponent"></component>
             </div>
         </div>
     </main>
@@ -19,10 +17,13 @@ export default {
   name: 'v-window',
   components: {
   },
+  props: {
+    curComponent: Object
+  },
   data: () => {
     return {
         curImage: {},
-        curImageName: "window_img_1.png"
+        curImageName: "window_img_1.png",
     }
   },
   methods: {
@@ -35,14 +36,8 @@ export default {
   },
   mounted()
   {
-    
-  },
-  watch:
-  {
-    $route(){
-        this.updateImage()
-    }
-  } 
+    this.updateImage()
+  }
 }
 </script>
   
